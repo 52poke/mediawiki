@@ -2602,10 +2602,10 @@ class Parser {
 					)
 				) {
 					# T26502: filter duplicates
-					if ( !isset( $this->mLangLinkLanguages[$iw] ) ) {
-						$this->mLangLinkLanguages[$iw] = true;
+					//if ( !isset( $this->mLangLinkLanguages[$iw] ) ) {
+					//	$this->mLangLinkLanguages[$iw] = true;
 						$this->mOutput->addLanguageLink( $nt->getFullText() );
-					}
+					//}
 
 					/**
 					 * Strip the whitespace interwiki links produce, see T10897

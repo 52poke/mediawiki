@@ -1,33 +1,15 @@
-# MediaWiki
+mudkipme/mediawiki
+==================
 
-MediaWiki is a free and open-source wiki software package written in PHP. It
-serves as the platform for Wikipedia and the other Wikimedia projects, used
-by hundreds of millions of people each month. MediaWiki is localised in over
-350 languages and its reliability and robust feature set have earned it a large
-and vibrant community of third-party users and developers.
+This repository is a fork of [MediaWiki](https://www.mediawiki.org) running on [52Poké Wiki](https://wiki.52poke.com).
 
-MediaWiki is:
+At 52Poké Wiki, we made some minor changes to core MediaWiki for certain needs, and these are absolutely cannot be done via extensions and not suitable for most other MediaWiki installations. Please [compare](https://github.com/wikimedia/mediawiki/compare/1.35.0...mudkipme:52w) for details.
 
-* feature-rich and extensible, both on-wiki and with hundreds of extensions;
-* scalable and suitable for both small and large sites;
-* simple to install, working on most hardware/software combinations; and
-* available in your language.
+These changes should be undone whenever available hooks are introduced in future versions of MediaWiki, and should be merged when core MediaWiki is upgraded on 52Poké Wiki.
 
-For system requirements, installation, and upgrade details, see the files
-RELEASE-NOTES, INSTALL, and UPGRADE.
+Currently the MediaWiki [version](https://wiki.52poke.com/wiki/Special:%E7%89%88%E6%9C%AC) running on 52Poké Wiki is `1.35.0`.
 
-* Ready to get started?
-** https://www.mediawiki.org/wiki/Special:MyLanguage/Download
-* Looking for the technical manual?
-** https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Contents
-* Seeking help from a person?
-** https://www.mediawiki.org/wiki/Special:MyLanguage/Communication
-* Looking to file a bug report or a feature request?
-** https://bugs.mediawiki.org/
-* Interested in helping out?
-** https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute
+## Changes
 
-MediaWiki is the result of global collaboration and cooperation. The CREDITS
-file lists technical contributors to the project. The COPYING file explains
-MediaWiki's copyright and license (GNU General Public License, version 2 or
-later). Many thanks to the Wikimedia community for testing and suggestions.
+* __Allowing duplicate interwikis:__ Some articles on 52Poké Wiki correspond to multiple articles on other [Encyclopædiæ Pokémonis](http://www.encyclopaediae-pokemonis.org/) sites. So duplicate interwikis are sometime needed.
+* __Add images to parser when using `filepath`:__ Some [gadgets](https://wiki.52poke.com/wiki/Help:%E6%97%B6%E9%97%B4%E5%B0%8F%E5%B7%A5%E5%85%B7) or templates on 52Poké Wiki use `filepath` to retrieve images to be displayed based on certain conditions. By adding these images to parser, it can make sure relevant special pages be updated.

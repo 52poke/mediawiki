@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>神奇宝贝百科</title>
+      <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+      <style>
+          body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+          }
+          .notice {
+            padding: 19px 29px 29px;
+            margin: 0 auto 20px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            -webkit-border-radius: 5px;
+               -moz-border-radius: 5px;
+                    border-radius: 5px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+               -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            text-align: center;
+          }
+      </style>
+</head>
+<body>
+      <div class="container">
+          <div class="notice">
+	<p><img src="http://static.52poke.com/wiki/4/49/404Luxio.png" alt="404 Not Found" /></p>
+    <p>
+    <script>
+    (function(){
+        var lang = navigator.language || navigator.browserLanguage || '', hant = false;
+        if (lang.toLowerCase().indexOf('zh-hant') > -1
+        || lang.toLowerCase().indexOf('zh-tw') > -1
+        || lang.toLowerCase().indexOf('zh-hk') > -1
+        || lang.toLowerCase().indexOf('zh-mo') > -1) {
+            hant = true;
+        }
+
+        var addition = '', name = location.pathname.substr(1);
+        if (name && name.indexOf('/') == -1 && name.indexOf('.') == -1
+        && name.indexOf('<') == -1 && name.indexOf('>') == -1
+        && name.indexOf('"') == -1 && name.indexOf("'") == -1) {
+            name = decodeURIComponent(name);
+            addition = '<br>你要找的是不是：<a href="/wiki/'+encodeURIComponent(name)+'">'+name+'</a>';
+        }
+
+        if (hant) {
+            document.write('你似乎輸入了錯誤的網址，请回到<a href="http://wiki.52poke.com/">神奇寶貝百科</a>主頁。'+addition);
+        } else {
+            document.write('你似乎输入了错误的网址，请回到<a href="http://wiki.52poke.com/">神奇宝贝百科</a>主页。'+addition);
+        }
+    })();
+    </script>
+    </p>
+      </div>
+      </div>
+</body>
+</html>

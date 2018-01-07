@@ -1226,6 +1226,7 @@ class CoreParserFunctions {
 					$url = $urlUtils->expand( $mto->getUrl(), PROTO_RELATIVE ) ?? false;
 				}
 			}
+			$parser->mOutput->addImage( $file->title->getDBkey(), $file->getTimestamp(), $file->getSha1() );
 			if ( $isNowiki ) {
 				return [ $url, 'nowiki' => true ];
 			}

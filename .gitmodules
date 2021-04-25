@@ -72,8 +72,8 @@
 	branch = REL1_35
 [submodule "extensions/ReplaceText"]
 	path = extensions/ReplaceText
-	url = https://github.com/mudkipme/mediawiki-extensions-ReplaceText.git
-	branch = 52w
+	url = https://github.com/wikimedia/mediawiki-extensions-ReplaceText.git
+	branch = REL1_35
 [submodule "extensions/Scribunto"]
 	path = extensions/Scribunto
 	url = https://gerrit.wikimedia.org/r/mediawiki/extensions/Scribunto
@@ -182,7 +182,7 @@
     branch = REL1_35
 [submodule "extensions/AWS"]
 	path = extensions/AWS
-	url = https://github.com/mudkipme/mediawiki-aws-s3.git
+	url = https://github.com/edwardspec/mediawiki-aws-s3.git
 [submodule "extensions/TemplateStyles"]
 	path = extensions/TemplateStyles
 	url = https://github.com/wikimedia/mediawiki-extensions-TemplateStyles.git

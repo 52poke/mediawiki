@@ -1,0 +1,14 @@
+{
+	"extra": {
+		"merge-plugin": {
+			"include": [
+				"extensions/Elastica/composer.json",
+				"extensions/CirrusSearch/composer.json",
+				"extensions/AWS/composer.json",
+				"extensions/EventBus/composer.json",
+				"extensions/OAuth/composer.json",
+				"extensions/TemplateStyles/composer.json"
+			]
+		}
+	}
+}

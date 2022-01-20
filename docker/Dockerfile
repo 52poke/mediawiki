@@ -22,7 +22,7 @@ COPY ./docker/php.ini /usr/local/etc/php/
 COPY ./docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY . /home/52poke/wiki
 
-RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=1.10.24 \
     && cd /home/52poke/wiki && composer install --no-dev
 
 RUN chown -R www-data:www-data /home/52poke/wiki

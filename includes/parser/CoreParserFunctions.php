@@ -1124,7 +1124,7 @@ class CoreParserFunctions {
 					$url = wfExpandUrl( $mto->getUrl(), PROTO_RELATIVE );
 				}
 			}
-			$parser->mOutput->addImage( $file->title->getDBkey(), $file->getTimestamp(), $file->getSha1() );
+			$parser->getOutput()->addImage( $file->title->getDBkey(), $file->getTimestamp(), $file->getSha1() );
 			if ( $isNowiki ) {
 				return [ $url, 'nowiki' => true ];
 			}

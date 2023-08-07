@@ -1,4 +1,4 @@
-FROM php:8.1-fpm
+FROM php:8.2-fpm
 
 RUN apt-get update && apt-get install -y supervisor zip imagemagick nginx git \
     libpng-dev libsqlite3-dev libxml2-dev libjpeg62-turbo-dev libfreetype6-dev \
@@ -22,8 +22,8 @@ COPY ./docker/php.ini /usr/local/etc/php/
 COPY ./docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY . /home/52poke/wiki
 
-RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.4.4 \
-    && cd /home/52poke/wiki && composer install --no-dev
+RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.5.8 \
+    && cd /home/52poke/wiki && composer update --no-dev --with-all-dependencies
 
 RUN chown -R www-data:www-data /home/52poke/wiki
 

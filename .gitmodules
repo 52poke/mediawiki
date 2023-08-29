@@ -196,3 +196,7 @@
 	path = extensions/UniversalLanguageSelector
 	url = https://github.com/wikimedia/mediawiki-extensions-UniversalLanguageSelector.git
 	branch = REL1_43
+[submodule "extensions/CodeMirror"]
+	path = extensions/CodeMirror
+	url = https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git
+	branch = REL1_43

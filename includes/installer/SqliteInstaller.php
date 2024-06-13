@@ -62,7 +62,7 @@ class SqliteInstaller extends DatabaseInstaller {
 	public function checkPrerequisites() {
 		// Bail out if SQLite is too old
 		$db = DatabaseSqlite::newStandaloneInstance( ':memory:' );
-		$result = static::meetsMinimumRequirement( $db->getServerVersion() );
+		$result = static::meetsMinimumRequirement( $db );
 		// Check for FTS3 full-text search module
 		if ( DatabaseSqlite::getFulltextSearchModule() != 'FTS3' ) {
 			$result->warning( 'config-no-fts3' );
@@ -183,7 +183,7 @@ class SqliteInstaller extends DatabaseInstaller {
 			}
 		}
 		# Put a .htaccess file in case the user didn't take our advice
-		file_put_contents( "$dir/.htaccess", "Deny from all\n" );
+		file_put_contents( "$dir/.htaccess", "Require all denied\n" );
 		return Status::newGood();
 	}
 

@@ -160,15 +160,12 @@
 	branch = REL1_43
 [submodule "extensions/EventBus"]
 	path = extensions/EventBus
-	url = https://github.com/mudkipme/mediawiki-extensions-EventBus.git
+	url = https://github.com/52poke/mediawiki-extensions-EventBus.git
 	branch = 52w
 [submodule "extensions/googleAnalytics"]
 	path = extensions/googleAnalytics
 	url = https://github.com/wikimedia/mediawiki-extensions-googleAnalytics.git
 	branch = REL1_43
-[submodule "extensions/Lazyload"]
-	path = extensions/Lazyload
-	url = https://github.com/mudkipme/mediawiki-lazyload.git
 [submodule "extensions/OAuth"]
 	path = extensions/OAuth
 	url = https://github.com/wikimedia/mediawiki-extensions-OAuth.git
@@ -199,4 +196,8 @@
 [submodule "extensions/CodeMirror"]
 	path = extensions/CodeMirror
 	url = https://github.com/wikimedia/mediawiki-extensions-CodeMirror.git
+	branch = REL1_43
+[submodule "extensions/TimedMediaHandler"]
+	path = extensions/TimedMediaHandler
+	url = https://github.com/wikimedia/mediawiki-extensions-TimedMediaHandler.git
 	branch = REL1_43

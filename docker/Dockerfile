@@ -1,6 +1,6 @@
 FROM php:8.3-fpm
 
-RUN apt-get update && apt-get install -y supervisor zip imagemagick nginx git \
+RUN apt-get update && apt-get install -y supervisor zip imagemagick nginx git jq \
 	libpng-dev libsqlite3-dev libxml2-dev libjpeg62-turbo-dev libfreetype6-dev \
 	&& apt-get -y autoremove \
 	&& apt-get clean \
@@ -21,6 +21,9 @@ COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/php.ini /usr/local/etc/php/
 COPY ./docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY . /home/52poke/wiki
+
+RUN jq '.config.TmhFileExtensions.value = ["oga", "flac", "opus", "mp3", "midi", "mid"]' /home/52poke/wiki/extensions/TimedMediaHandler/extension.json > temp.json \
+	&& mv temp.json /home/52poke/wiki/extensions/TimedMediaHandler/extension.json
 
 RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.5.8 \
 	&& cd /home/52poke/wiki && composer update --no-dev --with-all-dependencies

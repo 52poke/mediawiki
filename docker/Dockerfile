@@ -22,7 +22,7 @@ COPY ./docker/php.ini /usr/local/etc/php/
 COPY ./docker/supervisord.conf /etc/supervisor/supervisord.conf
 COPY . /home/52poke/wiki
 
-RUN jq '.config.TmhFileExtensions.value = ["oga", "flac", "opus", "mp3", "midi", "mid"]' /home/52poke/wiki/extensions/TimedMediaHandler/extension.json > temp.json \
+RUN jq '.config.TmhFileExtensions.value = ["oga", "opus", "mp3"]' /home/52poke/wiki/extensions/TimedMediaHandler/extension.json > temp.json \
 	&& mv temp.json /home/52poke/wiki/extensions/TimedMediaHandler/extension.json
 
 RUN curl https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=2.5.8 \

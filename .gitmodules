@@ -201,3 +201,7 @@
 	path = extensions/TimedMediaHandler
 	url = https://github.com/wikimedia/mediawiki-extensions-TimedMediaHandler.git
 	branch = REL1_43
+[submodule "extensions/Lockdown"]
+	path = extensions/Lockdown
+	url = https://github.com/wikimedia/mediawiki-extensions-Lockdown.git
+	branch = REL1_43

@@ -13,9 +13,11 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 	pdo_sqlite soap \
 	sockets pcntl
 
-RUN echo '' | pecl install -o -f redis xmlrpc \
-	&& rm -rf /tmp/pear \
-	&& docker-php-ext-enable redis xmlrpc
+RUN curl -sSLf \
+	-o /usr/local/bin/install-php-extensions \
+	https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions && \
+	chmod +x /usr/local/bin/install-php-extensions && \
+	install-php-extensions redis xmlrpc wikidiff2
 
 WORKDIR /home/52poke/wiki
 EXPOSE 80

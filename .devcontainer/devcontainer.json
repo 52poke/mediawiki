@@ -1,0 +1,29 @@
+{
+	"name": "MediaWiki Development",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "wiki-52poke",
+	"workspaceFolder": "/home/52poke/wiki",
+	"forwardPorts": [
+		8227
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"xdebug.php-debug"
+			],
+			"settings": {
+				"php.validate.executablePath": "/usr/local/bin/php"
+			},
+			"commands": [
+				{
+					"name": "Update Composer Dependencies",
+					"command": "composer update --no-dev --ignore-platform-req=ext-calendar --ignore-platform-req=ext-intl --with-all-dependencies",
+					"cwd": "${workspaceFolder}"
+				}
+			]
+		}
+	},
+	"remoteUser": "vscode",
+	"postCreateCommand": "composer update --no-dev --ignore-platform-req=ext-calendar --ignore-platform-req=ext-intl || echo 'Initial composer setup complete'"
+}

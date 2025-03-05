@@ -1,4 +1,4 @@
-mudkipme/mediawiki
+52poke/mediawiki
 ==================
 
 This repository is a fork of [MediaWiki](https://www.mediawiki.org) running on [52Poké Wiki](https://wiki.52poke.com).

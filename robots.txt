@@ -22,14 +22,6 @@ Disallow: /wiki/User_talk:
 Disallow: /zh/User_talk:
 Disallow: /zh-hans/User_talk:
 Disallow: /zh-hant/User_talk:
-Disallow: /wiki/%E9%99%84%E5%BD%95:
-Disallow: /zh/%E9%99%84%E5%BD%95:
-Disallow: /zh-hans/%E9%99%84%E5%BD%95:
-Disallow: /zh-hant/%E9%99%84%E5%BD%95:
-Disallow: /wiki/附录:
-Disallow: /zh/附录:
-Disallow: /zh-hans/附录:
-Disallow: /zh-hant/附录:
 Disallow: /wiki/Pre:
 Disallow: /zh/Pre:
 Disallow: /zh-hans/Pre:

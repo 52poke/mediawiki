@@ -1,18 +1,22 @@
+x-podman:
+  in_pod: false
+
 services:
   wiki-52poke:
     container_name: wiki-52poke-dev
     build:
       context: .
       args:
-        USER_ID: "1000"
-        GROUP_ID: "1000"
+        - USER_ID=1000
+        - GROUP_ID=1000
     volumes:
-      - ../:/home/52poke/wiki:cached
-      - ../docker/nginx.conf:/etc/nginx/nginx.conf:cached
-      - ../docker/php.ini:/usr/local/etc/php/php.ini:cached
-      - ../docker/supervisord.conf:/etc/supervisor/supervisord.conf:cached
+      - ../:/home/52poke/wiki:cached,z
+      - ../docker/nginx.conf:/etc/nginx/nginx.conf:cached,z
+      - ../docker/php.ini:/usr/local/etc/php/php.ini:cached,z
+      - ../docker/supervisord.conf:/etc/supervisor/supervisord.conf:cached,z
     ports:
       - 8227:80
+    userns_mode: "keep-id:uid=1000,gid=1000"
   poolcounter:
     container_name: poolcounter-dev
     image: ghcr.io/52poke/poolcounter:latest

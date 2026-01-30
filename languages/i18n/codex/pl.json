@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Woytecr"
+			"Woytecr",
+			"Msz2001",
+			"Matma Rex"
 		]
 	},
 	"cdx-dialog-close-button-label": "Zamknij",
@@ -10,5 +12,11 @@
 	"cdx-search-input-search-button-label": "Szukaj",
 	"cdx-table-select-all-label": "Zaznacz wszystkie wiersze",
 	"cdx-table-sort-caption": "$1 (nagłówki z przyciskami umożliwiają sortowanie).",
-	"cdx-typeahead-search-search-results-label": "Wyniki wyszukiwania"
+	"cdx-typeahead-search-search-results-label": "Wyniki wyszukiwania",
+	"cdx-table-pager-items-per-page-current": "{{PLURAL:$1|$1 wiersz|$1 wiersze|$1 wierszy}}",
+	"cdx-table-pager-items-per-page-default": "Wierszy na stronę",
+	"cdx-table-pagination-status-message-determinate-long": "Wyświetlono wyniki $1–$2 z $3",
+	"cdx-table-pagination-status-message-determinate-short": "$1–$2 z $3",
+	"cdx-table-pagination-status-message-indeterminate-long": "Wyświetlono wyniki $1–$2",
+	"cdx-table-pagination-status-message-indeterminate-short": "$1–$2"
 }

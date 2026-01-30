@@ -2,7 +2,7 @@ FROM php:8.3-fpm
 
 RUN apt-get update && apt-get install -y supervisor zip imagemagick nginx \
 	libpng-dev libsqlite3-dev libxml2-dev libjpeg62-turbo-dev libfreetype6-dev \
-	git curl unzip openssh-client \
+	git curl unzip openssh-client libicu-dev \
 	&& apt-get -y autoremove \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

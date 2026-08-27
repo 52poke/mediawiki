@@ -2,6 +2,7 @@
 	"name": "MediaWiki Development",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "wiki-52poke",
+	"shutdownAction": "stopCompose",
 	"workspaceFolder": "/home/52poke/wiki",
 	"forwardPorts": [
 		8227

@@ -8,6 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Use GitHub mirror for nested VisualEditor submodule
+      run: git config --global url."https://github.com/wikimedia/VisualEditor.git".insteadOf https://gerrit.wikimedia.org/r/VisualEditor/VisualEditor.git
     - name: Checkout
       uses: actions/checkout@v2
       with:

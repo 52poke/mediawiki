@@ -1,7 +1,11 @@
 FROM php:8.3.36-fpm
 
+RUN php -r 'exit(PHP_VERSION === "8.3.36" ? 0 : 1);' \
+	&& php-fpm --version
+
 RUN apt-get update && apt-get install -y supervisor poolcounter zip imagemagick nginx git jq \
 	libpng-dev libsqlite3-dev libxml2-dev libjpeg62-turbo-dev libfreetype6-dev libicu-dev \
+	liblzf-dev liblz4-dev libzstd-dev libthai-dev \
 	&& apt-get -y autoremove \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
@@ -13,11 +17,8 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
 	pdo_sqlite soap \
 	sockets pcntl
 
-RUN curl -sSLf \
-	-o /usr/local/bin/install-php-extensions \
-	https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions && \
-	chmod +x /usr/local/bin/install-php-extensions && \
-	install-php-extensions redis xmlrpc wikidiff2
+COPY ./docker/install-extensions.sh /usr/local/bin/install-wiki-extensions
+RUN sh /usr/local/bin/install-wiki-extensions
 
 COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/php.ini /usr/local/etc/php/

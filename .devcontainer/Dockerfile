@@ -26,10 +26,14 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-RUN groupadd --gid ${GROUP_ID} vscode && \
-	useradd --uid ${USER_ID} --gid ${GROUP_ID} -m vscode --shell /bin/bash && \
+RUN groupmod --gid "${GROUP_ID}" www-data && \
+	usermod --uid "${USER_ID}" --gid "${GROUP_ID}" --home /home/www-data --shell /bin/bash www-data && \
+	mkdir -p /home/www-data && \
+	chown -R www-data:www-data /home/www-data /var/www /var/lib/nginx && \
 	apt-get update && apt-get install -y sudo && \
-	echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+	echo "www-data ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/52poke/wiki
 EXPOSE 80

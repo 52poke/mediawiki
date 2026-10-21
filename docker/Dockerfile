@@ -1,4 +1,4 @@
-FROM php:8.3-fpm
+FROM php:8.3.36-fpm
 
 RUN apt-get update && apt-get install -y supervisor poolcounter zip imagemagick nginx git jq \
 	libpng-dev libsqlite3-dev libxml2-dev libjpeg62-turbo-dev libfreetype6-dev libicu-dev \

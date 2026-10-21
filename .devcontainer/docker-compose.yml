@@ -7,8 +7,8 @@ services:
     build:
       context: .
       args:
-        - USER_ID=1000
-        - GROUP_ID=1000
+        USER_ID: ${MW_DOCKER_UID:-1000}
+        GROUP_ID: ${MW_DOCKER_GID:-1000}
     volumes:
       - ../:/home/52poke/wiki:cached,z
       - ../docker/nginx.conf:/etc/nginx/nginx.conf:cached,z
@@ -16,7 +16,7 @@ services:
       - ../docker/supervisord.conf:/etc/supervisor/supervisord.conf:cached,z
     ports:
       - 8227:80
-    userns_mode: "keep-id:uid=1000,gid=1000"
+    userns_mode: keep-id
     depends_on:
       - memcached
   memcached:

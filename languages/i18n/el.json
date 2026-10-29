@@ -773,7 +773,7 @@
 	"modeleditnotsupported-text": "Η επεξεργασία δεν υποστηρίζεται για το μοντέλο περιεχομένου $1.",
 	"permissionserrors": "Σφάλμα  άδειας",
 	"permissionserrorstext": "Δεν έχετε άδεια να το κάνετε αυτό, για {{PLURAL:$1|τον εξής λόγο|τους εξής λόγους}}:",
-	"permissionserrorstext-withaction": "Δεν έχετε την άδεια να $2, για {{PLURAL:$1|τον ακόλουθο λόγο|τους ακόλουθους λόγους}}:",
+	"permissionserrorstext-withaction": "Δεν έχετε την άδεια για $2, για {{PLURAL:$1|τον ακόλουθο λόγο|τους ακόλουθους λόγους}}:",
 	"contentmodelediterror": "Δεν μπορείτε να επεξεργαστείτε αυτή την αναθεώρηση, γιατί το περιεχόμενό του μοντέλου του  είναι <code>$1</code>, το οποίο διαφέρει από το τρέχον περιεχόμενο μοντέλο της σελίδας <code>$2</code>.",
 	"recreate-moveddeleted-warn": "'''Προειδοποίηση: Ξαναδημιουργείτε μια σελίδα που είχε προηγουμένως διαγραφεί.'''\n\nΘα πρέπει να σκεφτείτε σοβαρά αν είναι σωστό να συνεχίσετε να επεξεργάζεστε αυτή τη σελίδα.\nΟι καταγραφές διαγραφών και μετακινήσεων παρέχονται εδώ για διευκόλυνση:",
 	"moveddeleted-notice": "Αυτή η σελίδα δεν υπάρχει.\nΤο ημερολόγιο καταγραφής διαγραφών, προστασίας, και μετακινήσεων για τη σελίδα παρέχεται παρακάτω για αναφορά.",
@@ -3701,7 +3701,7 @@
 	"limitreport-walltime": "Χρήση πραγματικού χρόνου",
 	"limitreport-walltime-value": "$1 {{PLURAL:$1|δευτερόλεπτο|δευτερόλεπτα}}",
 	"limitreport-ppvisitednodes": "Καταμέτρηση κόμβων επισκεφθέντων από τον προεπεξεργαστή",
-	"limitreport-postexpandincludesize": "Μέγεθος συμπερίληψης πριν την ανάπτυξη",
+	"limitreport-postexpandincludesize": "Μέγεθος μετά την επέκτση προτύπων και συναρτήσεων",
 	"limitreport-postexpandincludesize-value": "$1 από $2 {{PLURAL:$2|byte|bytes}}",
 	"limitreport-templateargumentsize": "Μέγεθος ορισμάτων προτύπων",
 	"limitreport-templateargumentsize-value": "$1 από $2 {{PLURAL:$2|byte|bytes}}",
@@ -4094,5 +4094,6 @@
 	"benefit-3-description": "Προτιμήσεις που σας επιτρέπουν να προσαρμόσετε την εμπειρία σας.",
 	"temp-user-unable-to-acquire": "Δεν είναι δυνατή η απόκτηση ονόματος χρήστη προσωρινού λογαριασμού. Παρακαλούμε προσπαθήστε ξανά.",
 	"table-of-contents-show-button-aria-label": "Προβολή του Πίνακα Περιεχομένων",
-	"table-of-contents-hide-button-aria-label": "Απόκρυψη του πίνακα περιεχομένων"
+	"table-of-contents-hide-button-aria-label": "Απόκρυψη του πίνακα περιεχομένων",
+	"mypage-disallowed-action": "Για λόγους ασφαλείας, η ενέργεια «$1» δεν μπορεί να χρησιμοποιηθεί στη σελίδα Special:MyPage."
 }

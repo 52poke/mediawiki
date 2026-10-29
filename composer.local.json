@@ -9,7 +9,8 @@
 				"extensions/OAuth/composer.json",
 				"extensions/TemplateStyles/composer.json",
 				"extensions/AbuseFilter/composer.json",
-				"extensions/TimedMediaHandler/composer.json"
+				"extensions/TimedMediaHandler/composer.json",
+				"extensions/OATHAuth/composer.json"
 			]
 		}
 	}
